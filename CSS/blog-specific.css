@@ -1,0 +1,53 @@
+
+.card-title {
+  font-family: magnify;
+  text-align: center;
+  margin: 40px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card-instructions p {
+  text-align: justify;
+}
+
+
+.blog-specific {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px 20px 20px;
+}
+
+.big-image {
+  text-align: center;
+}
+
+.card-image {
+  max-width: 300px;
+  cursor: pointer; /* Add cursor pointer for clickable effect */
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+

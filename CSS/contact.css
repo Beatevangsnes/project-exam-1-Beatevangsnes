@@ -1,0 +1,57 @@
+main h1 {
+  font-family: magnify;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-img img {
+  max-width: 280px;
+}
+
+.contact-img {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.container {
+  width: 320px;
+  margin: 50px auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #1c1c1c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: white;
+  color: #1c1c1c;
+}
+
+
+
