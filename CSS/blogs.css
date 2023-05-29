@@ -1,8 +1,14 @@
 
- main h1 {
+main {
+  padding: 20px;
+}
+
+main h1 {
   text-align: center;
-  margin: 40px;
-  font-family: magnify;
+  max-width: 100%;
+  border-bottom: 1px solid black;
+  margin: 10px;
+  padding-bottom: 20px;
 }
 
 .blog-post a {
@@ -13,7 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .search-container input {
@@ -21,17 +27,14 @@
   border: transparent;
   width: 200px;
   padding-left: 4px;
+  height: 26px;
 }
 
 .search-container button {
   background-color: transparent;
-  border: 0;
+  border: none;
   font-size: 20px;
   margin-left: 10px;
-}
-
-.search-button {
-  background-color: none;
 }
 
 .blog-post {
@@ -93,5 +96,60 @@
   background: rgba(28, 28, 28, 0.6);
   color: white;
   padding-bottom: 10px;
+}
+
+.card-published {
+  font-weight: 200;
+}
+
+main h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+main h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+
+@media (min-width: 800px) {
+
+  .blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .search-container input {
+    width: 300px;
+  }
+
+  .blog-post :hover {
+    background-color: #1C1C1C;
+  }
+
+
+}
+
+@media (min-width: 870px) {
+
+  main {
+    padding: 40px;
+  }
+  
+  .blog-post {
+    margin: 10px;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+  button {
+    font-size: 18px;
+  }
 }
 

@@ -1,17 +1,21 @@
-const url = "https://exam1.beatiz.com/wp-json/wc/store/products";
+const url = "https://exam1.beatiz.com/wp-json/wl/v1/blogs";
 
 const blogPostsContainer = document.querySelector(".blog-posts");
 const loadMoreButton = document.querySelector(".load-more");
 const searchInput = document.querySelector("#search-input");
-const resetButton = document.querySelector("#reset-button");
+const searchClearButton = document.querySelector("#search-clear-button");
 
 let page = 1;
-const perPage = 10;
-let existingPosts = []; 
+const initialPerPage = 10; // Number of posts to display initially
+const perPage = 4; // Number of posts to load per "Load more" click
+let existingPosts = [];
+let searchKeyword = "";
 
-async function getBlogs(searchQuery = "") {
+async function getBlogs() {
   try {
-    const response = await fetch(`${url}?page=${page}&per_page=${perPage}&search=${searchQuery}`);
+    const response = await fetch(
+      `${url}?page=${page}&per_page=${page === 1 ? initialPerPage : perPage}`
+    );
     const data = await response.json();
 
     if (data.length === 0) {
@@ -19,21 +23,37 @@ async function getBlogs(searchQuery = "") {
       return;
     }
 
-    data.forEach((post) => {
-      const { id, name, images } = post;
-      
-      
+    let filteredData = data;
+
+    if (searchKeyword.trim() !== "") {
+      filteredData = data.filter((post) =>
+        post.title.toLowerCase().includes(searchKeyword.toLowerCase())
+      );
+    }
+
+    filteredData.forEach((post, index) => {
+      const { id, title, featured_image, date, author, slug } = post;
+      const d = new Date(date).toLocaleDateString("en-EU", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      });
+
+      if (page === 1 && index >= initialPerPage) {
+        return;
+      }
+
       if (!existingPosts.includes(id)) {
-        existingPosts.push(id); 
-        
+        existingPosts.push(id);
+
         const blogPost = document.createElement("div");
         blogPost.classList.add("blog-post");
         blogPost.innerHTML = `
-          <a href="blog-specific.html?id=${id}">
+          <a href="/html/blog-specific.html?slug=${slug}">
             <div class="post-card">
-              <img class="card-image" src="${images[0].src}" />
-              <h2 class="card-title">${name}</h2>
-              <p class="card-published">Published: </p>
+              <img class="card-image" src="${featured_image.large}" />
+              <h2 class="card-title">${title}</h2>
+              <p class="card-published">Published: ${d} </p>
             </div>
           </a>
         `;
@@ -52,50 +72,34 @@ function loadMore() {
 }
 
 function searchPosts() {
-  const searchQuery = searchInput.value.trim();
-  blogPostsContainer.innerHTML = "";
   page = 1;
-  loadMoreButton.style.display = "block";
-  existingPosts = []; 
-  getBlogs(searchQuery);
-  resetButton.style.display = searchQuery === "" ? "none" : "block"; 
-}
-
-function handleSearch(event) {
-  const searchQuery = searchInput.value.trim();
-  if (event.key === "Enter") {
-    searchPosts();
-  } else if (event.key === "Backspace" && searchQuery === "") {
-    resetSearch();
-  } else {
-    blogPostsContainer.innerHTML = "";
-    page = 1;
-    loadMoreButton.style.display = "block";
-    existingPosts = []; 
-    getBlogs(searchQuery);
-    resetButton.style.display = "none"; 
-  }
-}
-
-function resetSearch() {
-  searchInput.value = "";
+  existingPosts = [];
   blogPostsContainer.innerHTML = "";
-  page = 1;
-  loadMoreButton.style.display = "block";
-  existingPosts = []; 
+  searchKeyword = searchInput.value.trim();
   getBlogs();
-  resetButton.style.display = "none"; 
 }
 
-function checkReferrer() {
-  const referrer = document.referrer;
-  resetButton.style.display = referrer.includes("blogs.html") ? "block" : "none";
+function clearSearch() {
+  searchInput.value = "";
+  searchKeyword = "";
+  page = 1;
+  existingPosts = [];
+  blogPostsContainer.innerHTML = "";
+  getBlogs();
+  searchClearButton.style.display = "none";
 }
 
 loadMoreButton.addEventListener("click", loadMore);
-searchInput.addEventListener("keydown", handleSearch);
-resetButton.addEventListener("click", resetSearch);
+searchInput.addEventListener("input", function () {
+  searchClearButton.style.display = searchInput.value.trim() ? "block" : "none";
+});
+searchInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    searchPosts();
+  }
+});
+searchClearButton.addEventListener("click", clearSearch);
 
-
+// Load the initial 10 posts
 getBlogs();
-checkReferrer();

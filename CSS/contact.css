@@ -1,7 +1,14 @@
+main {
+  padding: 20px;
+}
+
 main h1 {
-  font-family: magnify;
   text-align: center;
-  margin-top: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid black;
+  margin: 10px;
+  padding-bottom: 10px;
+
 }
 
 .contact-img img {
@@ -11,6 +18,17 @@ main h1 {
 .contact-img {
   text-align: center;
   margin-top: 40px;
+}
+
+.contact-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: justify;
+  max-width: 280px;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -55,3 +73,103 @@ button[type="submit"]:hover {
 
 
 
+.container label {
+  font-weight: 400;
+}
+
+textarea#message {
+  height: 100px;
+}
+
+
+@media (min-width: 650px) {
+  .contact-img img {
+    max-width: 400px;
+  }
+
+  .contact-text {
+    max-width: 400px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  main {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  main h1 {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+
+  .contact-text {
+    grid-column: 1/4;
+    grid-row: 2;
+    max-width: 800px;
+  }
+
+  .contact-img {
+    max-width: 400px;
+    grid-column: 1/2;
+    grid-row: 3;
+    padding-left: 20px;
+  }
+
+  .container {
+    grid-column: 2/4;
+    grid-row: 3;
+  }
+  .container input {
+    width: 450px;
+  }
+
+  .container textarea {
+    width: 450px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  
+
+  .contact-img img {
+    max-width: 500px;
+  }
+
+  .contact-text p {
+    font-size: 18px;
+  }
+
+  .container label {
+    font-size: 18px;
+  }
+  
+  button {
+    font-size: 18px;
+  }
+
+  .container input {
+    width: 560px;
+  }
+
+  .container textarea {
+    width: 560px;
+  }
+
+  .contact-img {
+    padding-left: 40px;
+  }
+}

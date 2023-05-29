@@ -15,31 +15,34 @@ form.addEventListener("submit", function (e) {
 
   clearErrors();
 
+  const errors = [];
+
   if (!isValidName(nameValue)) {
-    showError("name", "Name must be more than 5 characters long.");
-    return;
+    errors.push({ inputId: "name", errorMessage: "Name must be more than 5 characters long." });
   }
 
   if (!isValidEmail(emailValue)) {
-    showError("email", "Please enter a valid email address.");
-    return;
+    errors.push({ inputId: "email", errorMessage: "Please enter a valid email address." });
   }
 
   if (!isValidSubject(subjectValue)) {
-    showError("subject", "Subject must be more than 15 characters long.");
-    return;
+    errors.push({ inputId: "subject", errorMessage: "Subject must be more than 15 characters long." });
   }
 
   if (!isValidMessage(messageValue)) {
-    showError("message", "Message content must be more than 25 characters long.");
-    return;
+    errors.push({ inputId: "message", errorMessage: "Message content must be more than 25 characters long." });
   }
 
+  if (errors.length > 0) {
+    errors.forEach((error) => {
+      showError(error.inputId, error.errorMessage);
+    });
+    return;
+  }
 
   successMessage.textContent = "Thank you for your message.";
   successMessage.style.color = "#1C1C1C";
   form.reset();
-
 
   console.log("Form submitted successfully!");
 });
@@ -72,4 +75,3 @@ function showError(inputId, errorMessage) {
   const errorElement = document.getElementById(`${inputId}Error`);
   errorElement.textContent = errorMessage;
 }
-

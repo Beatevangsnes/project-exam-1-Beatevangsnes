@@ -1,9 +1,14 @@
+
+
 .hero img {
   max-width: 100%;
+  padding: 10px;
 }
 
 .hero {
   text-align: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .card a {
@@ -12,7 +17,6 @@
 
 .carousel-container {
   position: relative;
-  margin: 20px 0;
   justify-content: center;
   align-items: center;
 }
@@ -24,7 +28,7 @@
   font-size: 24px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 40px;
+  width: 25px;
   height: 40px;
   cursor: pointer;
   z-index: 1;
@@ -56,37 +60,145 @@
 }
 
 .card {
-  max-width: 140px;
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 220px;
+  max-width: 150px;
+  height: 250px;
   margin: 6px;
-  padding: 20px;
   text-align: center;
-  background-color: #1d1b1b;
+  background: rgba(28, 28, 28, 0.6);
   display: flex;
   justify-content: center;
 }
 
 .card-image {
-  max-width: 120px;
+  max-width: 150px;
   padding-bottom: 20px;
-
 }
 
 .card-title {
   text-decoration: none;
   color: white;
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
-  font-family: "magnify";
+  height: 38px;
 }
+
+
 
 .lp-section h1 {
   text-align: center;
-  font-family: magnify;
   margin-top: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  max-width: 100%;
+  border-bottom: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
+.card-published {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-weight: 200;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.space {
+  max-width: 100%;
+  border-bottom: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+
+  main {
+    padding: 20px;
+  }
+
+  .hero img {
+    padding: 0;
+  }
+}
+
+
+
+@media (min-width: 985px) {
+
+ .lp-section h1 {
+  max-width: 100%;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+ }
+
+ .card :hover {
+  background-color: #1c1c1c;
+ }
+  
+ .post-card a {
+  width: 200px;
+  margin: 20px;
+}
+
+.carousel-wrapper {
+  padding: 40px;
+}
+
+.card {
+  width: 200px;
+  max-width: 200px;
+  height: 300px;
+}
+
+.card-image {
+ max-width: 200px;
+}
+
+.post-card h2 {
+  font-size: 16px;
+}
+
+.post-card p {
+  font-size: 14px;
+}
+
+}
+
+@media (min-width: 1210px) {
+
+  main {
+    padding: 0 80px 80px 80px;
+  }
+
+  .lp-section {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .lp-section {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .lp-section {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
 

@@ -1,12 +1,12 @@
 const blogSpecificContainer = document.querySelector(".blog-specific");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-const id = params.get("id");
+const slug = params.get("slug");
 
-if (!id) {
-  blogSpecificContainer.innerHTML = "No product ID found in URL";
+if (!slug) {
+  blogSpecificContainer.innerHTML = "No slug found in URL";
 } else {
-  const url = "https://exam1.beatiz.com/wp-json/wc/store/products/" + id;
+  const url = "https://exam1.beatiz.com/wp-json/wl/v1/blogs/" + slug;
 
   async function fetchBlogSpecificPost() {
     try {
@@ -16,28 +16,38 @@ if (!id) {
       blogSpecificContainer.innerHTML = "";
       const blogSpecific = document.createElement("div");
       blogSpecific.classList.add("blog-specific");
+
+      const cardImage = data.featured_image && data.featured_image.large ? `<img class="card-image" src="${data.featured_image.large}" />` : '';
+
+      const dateOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+      const formattedDate = new Date(data.date).toLocaleDateString('en-US', dateOptions);
+
       blogSpecific.innerHTML = `
         <div class="card-title">
-          <h1>${data.name}</h1>
+          <h1>${data.title}</h1>
         </div>
         <div class="big-image">
-        <img class="card-image" src="${data.images[0].src}" />
+          ${cardImage}
         </div>
         <div class="card-ingredients">
           <h2>Ingredients</h2>
+          <p>${data.ingredients}</p>
         </div>
         <div class="card-instructions">
           <h2>Instructions</h2>
-          <p>${data.short_description}</p>
+          <p>${data.instructions}</p>
         </div>
         <div class="card-description">
           <h2>Facts</h2>
-          <p>${data.description}</p>
+          <p>${data.content}</p>
+        </div>
+        <div class="card-info">
+          <p>${formattedDate} | by ${data.author}</p>
         </div>
       `;
       blogSpecificContainer.appendChild(blogSpecific);
 
-      blogSpecificContainer.addEventListener("click", function(event) {
+      blogSpecificContainer.addEventListener("click", function (event) {
         if (event.target.classList.contains("card-image")) {
           const modal = document.createElement("div");
           modal.classList.add("modal");
@@ -48,7 +58,7 @@ if (!id) {
 
           modal.appendChild(modalImage);
 
-          modal.addEventListener("click", function(event) {
+          modal.addEventListener("click", function (event) {
             if (event.target === modal) {
               modal.remove();
             }
@@ -64,5 +74,3 @@ if (!id) {
 
   fetchBlogSpecificPost();
 }
-
-

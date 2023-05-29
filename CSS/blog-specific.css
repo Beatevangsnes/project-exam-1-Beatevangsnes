@@ -1,28 +1,44 @@
 
-.card-title {
-  font-family: magnify;
-  text-align: center;
-  margin: 40px;
+main {
+  padding: 40px;
 }
-
-h2 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.card-instructions p {
-  text-align: justify;
-}
-
 
 .blog-specific {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 20px 20px 20px;
 }
+
+.card-title {
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.card-instructions p {
+  text-align: justify;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  justify-content: center;
+}
+
+.card-ingredients {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.card-description {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
 
 .big-image {
   text-align: center;
@@ -30,7 +46,7 @@ h2 {
 
 .card-image {
   max-width: 300px;
-  cursor: pointer; /* Add cursor pointer for clickable effect */
+  cursor: pointer;
 }
 
 .modal {
@@ -51,3 +67,128 @@ h2 {
   max-height: 90%;
 }
 
+.card-info {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.blog-specific h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.blog-specific h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
+
+.card-image {
+  max-width: 460px;
+}
+}
+
+@media (min-width: 800px) {
+
+.blog-specific {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+}
+
+@media (min-width: 1000px) {
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .blog-specific {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: auto;
+  }
+
+  .card-title {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+
+  .big-image {
+    grid-column: 1/2;
+    grid-row: 2;
+    text-align: left;
+    max-width: 420px;
+  }
+
+  .big-image img {
+    max-width: 420px;
+  }
+
+  .card-ingredients h2 {
+    margin-top: 0;
+  }
+
+  .card-ingredients {
+    grid-column: 2/4;
+    grid-row: 2;
+    height: 100px;
+    border-bottom: none;
+  }
+
+  .card-instructions {
+    grid-column: 2/4;
+    grid-row: 2;
+    margin-top: 100px;
+  }
+
+  .card-instructions p {
+    border-bottom: none;
+  }
+
+  .card-description {
+    grid-column: 1/4;
+    grid-row: 3;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+
+  
+
+  .big-image img {
+    max-width: 500px;
+    text-align: left;
+  }
+
+  .big-image {
+    max-width: 500px;
+  }
+
+  .card-ingredients p {
+    font-size: 18px;
+  }
+
+  .card-instructions p {
+    font-size: 18px;
+  }
+
+  .card-description p {
+    font-size: 18px;
+  }
+
+  .card-info {
+    font-size: 14px;
+  }
+
+
+}

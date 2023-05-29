@@ -1,4 +1,4 @@
-const url = "https://exam1.beatiz.com/wp-json/wc/store/products";
+const url = "https://exam1.beatiz.com/wp-json/wl/v1/blogs";
 
 const latestPostsContainer = document.querySelector(".latest-posts");
 const prevBtn = document.querySelector(".prev-btn");
@@ -29,16 +29,25 @@ function showPosts() {
   const currentPosts = posts.slice(startIndex, endIndex);
 
   currentPosts.forEach((post, index) => {
-    const { id, name, images, meta_data } = post;
+    const { id, slug, title, featured_image, date, author } = post;
+    const d = new Date(date).toLocaleDateString("en-EU", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `
-      <a href="blog-specific.html?id=${id}">
-        <div class="post-card">
-          <img class="card-image" src="${images[0].src}" />
-          <h2 class="card-title">${name}</h2>
-        </div>
-      </a>
+    <div class="latest-post-card">
+    <a href="/html/blog-specific.html?slug=${slug}">
+    <div class="post-card">
+      <img class="card-image" src="${featured_image.large}" />
+      <h2 class="card-title">${title}</h2>
+      <p class="card-published">${d}</p>
+    </div>
+  </a>
+    </div>
+      
     `;
     latestPostsContainer.appendChild(card);
   });
