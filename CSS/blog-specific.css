@@ -81,25 +81,20 @@ h2 {
   font-weight: 400;
 }
 
-
 @media (min-width: 600px) {
-
-.card-image {
-  max-width: 460px;
-}
+  .card-image {
+    max-width: 460px;
+  }
 }
 
 @media (min-width: 800px) {
-
-.blog-specific {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
+  .blog-specific {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media (min-width: 1000px) {
-  
   main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -107,7 +102,6 @@ h2 {
   }
 
   .blog-specific {
-    display: grid;
     grid-column: 1/4;
     grid-row: auto;
   }
@@ -155,9 +149,8 @@ h2 {
     grid-column: 1/4;
     grid-row: 3;
   }
-
-
 }
+
 
 @media (min-width: 1200px) {
 
