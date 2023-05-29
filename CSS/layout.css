@@ -133,6 +133,11 @@ footer {
 
 @media (min-width: 650px) {
 
+  nav {
+    height: 12vh;
+    width: auto;
+  }
+
   .nav-links ul {
     height: 12vh;
     margin-bottom: 10px;
@@ -154,7 +159,7 @@ footer {
     display: inline-block;
     margin: 0 5px;
     margin-top: 14px;
-    margin-bottom: 5px;
+    height: 20px;
   }
 
   nav ul li a {
@@ -164,6 +169,7 @@ footer {
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
+    height: 12vh;
   }
 
   ul {
