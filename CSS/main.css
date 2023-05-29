@@ -15,6 +15,37 @@
   text-decoration: none;
 }
 
+.fp-content h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.fp-content {
+  text-align: justify;
+  padding: 20px;
+}
+
+.browse-button {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.browse-button a {
+  padding: 10px;
+  background-color: #1c1c1c;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+
+.browse-button a:hover {
+  color: #1c1c1c;
+  background-color: white;
+}
+
+
 .carousel-container {
   position: relative;
   justify-content: center;
@@ -90,13 +121,13 @@
   margin-top: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 400;
   max-width: 100%;
   border-bottom: 1px solid black;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .card-published {
@@ -178,6 +209,14 @@ h2 {
 
 .post-card p {
   font-size: 14px;
+}
+
+.lp-section h1 {
+  font-size: 32px;
+}
+
+.fp-content h1 {
+  font-size: 32px;
 }
 
 }
