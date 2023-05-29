@@ -50,7 +50,7 @@ nav li a {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
-  padding: 10px;
+
 }
 
 nav ul li {
@@ -133,6 +133,11 @@ footer {
 
 @media (min-width: 650px) {
 
+  .nav-links ul {
+    height: 12vh;
+    margin-bottom: 10px;
+  }
+
   .checkbutton {
     display: none;
   }
@@ -142,6 +147,7 @@ footer {
     max-width: 1400px;
     margin-left: auto;
     margin-right: 20px;
+    padding-bottom: 10px;
   }
 
   nav ul li {
