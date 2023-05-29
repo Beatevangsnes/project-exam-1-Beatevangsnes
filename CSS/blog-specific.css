@@ -81,6 +81,20 @@ h2 {
   font-weight: 400;
 }
 
+@media (max-width: 599px) {
+  main {
+    padding: 40px;
+  }
+  
+  .blog-specific {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+}
+
 @media (min-width: 600px) {
 
 .card-image {
