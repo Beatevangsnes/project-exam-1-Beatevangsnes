@@ -49,7 +49,7 @@ async function getBlogs() {
         const blogPost = document.createElement("div");
         blogPost.classList.add("blog-post");
         blogPost.innerHTML = `
-          <a href="/html/blog-specific.html?slug=${slug}">
+          <a href="/blog-specific.html?slug=${slug}">
             <div class="post-card">
               <img class="card-image" src="${featured_image.large}" />
               <h2 class="card-title">${title}</h2>

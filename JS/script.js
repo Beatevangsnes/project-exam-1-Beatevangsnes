@@ -39,7 +39,7 @@ function showPosts() {
     card.classList.add("card");
     card.innerHTML = `
     <div class="latest-post-card">
-    <a href="/html/blog-specific.html?slug=${slug}">
+    <a href="/blog-specific.html?slug=${slug}">
     <div class="post-card">
       <img class="card-image" src="${featured_image.large}" />
       <h2 class="card-title">${title}</h2>
