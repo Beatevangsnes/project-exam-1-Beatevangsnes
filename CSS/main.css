@@ -15,9 +15,11 @@
   text-decoration: none;
 }
 
-.fp-content h1 {
+.fp-content h2 {
   text-align: center;
   font-size: 24px;
+  padding-bottom: 40px;
+  margin-top: 40px;
 }
 
 .fp-content {
@@ -127,7 +129,6 @@
   margin-right: auto;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  font-size: 24px;
 }
 
 .card-published {
@@ -211,13 +212,9 @@ h2 {
   font-size: 14px;
 }
 
-.lp-section h1 {
-  font-size: 32px;
-}
 
-.fp-content h1 {
-  font-size: 32px;
-}
+
+
 
 }
 
@@ -225,6 +222,10 @@ h2 {
 
   main {
     padding: 0 80px 80px 80px;
+  }
+
+  .fp-content p {
+    font-size: 18px;
   }
 
   .lp-section {
