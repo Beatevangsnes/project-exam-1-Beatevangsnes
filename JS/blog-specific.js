@@ -13,6 +13,7 @@ if (!slug) {
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
+      document.title = data.title; 
       blogSpecificContainer.innerHTML = "";
       const blogSpecific = document.createElement("div");
       blogSpecific.classList.add("blog-specific");

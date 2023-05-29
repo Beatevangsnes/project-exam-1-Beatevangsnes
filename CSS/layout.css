@@ -25,9 +25,9 @@ header {
 
 
 
-.logo h1 {
-  text-decoration: none;
-  color: white;
+
+.logo img {
+max-width: 180px;
 }
 
 
@@ -61,6 +61,7 @@ nav ul li {
 .checkbutton {
   font-size: 24px;
   display: block;
+  margin-top: 14px;
 }
 
 #check:checked ~ ul{
@@ -86,6 +87,11 @@ main {
     font-weight: 500;
     font-size: 32px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    text-align: center;
   }
 
 footer {
@@ -140,8 +146,8 @@ footer {
 
   nav ul li {
     display: inline-block;
-    line-height: 100px;
     margin: 0 5px;
+    margin-top: 14px;
   }
 
   nav ul li a {
@@ -149,6 +155,7 @@ footer {
     font-size: 16px;
     padding: 7px 12px;
     border-radius: 5px;
+    margin-top: 20px;
   }
 
   ul {
@@ -178,6 +185,11 @@ footer {
     padding-left: 40px;
     padding-right: 40px;
   }
+
+  .logo {
+    max-width: 200px;
+  }
+
 }
 
 
@@ -206,6 +218,10 @@ footer {
     font-size: 14px;
   }
 
+  .logo {
+    max-width: 220px;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -216,6 +232,11 @@ footer {
   .nav-links {
     margin-right: 100px;
   }
+
+  .logo {
+    max-width: 240px;
+  }
+
  
 
 }
