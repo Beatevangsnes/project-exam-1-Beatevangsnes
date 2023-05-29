@@ -136,12 +136,14 @@ h2 {
     grid-row: 2;
     height: 100px;
     border-bottom: none;
+    margin-left: 20px;
   }
 
   .card-instructions {
     grid-column: 2/4;
     grid-row: 2;
     margin-top: 100px;
+    margin-left: 20px;
   }
 
   .card-instructions p {
