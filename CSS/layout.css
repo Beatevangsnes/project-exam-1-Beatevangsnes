@@ -53,6 +53,7 @@ nav li a {
 }
 
 nav ul li {
+  line-height: 100px;
   margin: 0 5px;
 } 
 
@@ -159,6 +160,7 @@ footer {
     margin: 0 5px;
     margin-top: 14px;
     height: 20px;
+    line-height: 12vh;
   }
 
   nav ul li a {
