@@ -82,15 +82,8 @@ h2 {
 }
 
 @media (max-width: 599px) {
-  main {
-    padding: 40px;
-  }
-  
   .blog-specific {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
   }
   
 }
