@@ -18,8 +18,10 @@
 .fp-content h2 {
   text-align: center;
   font-size: 24px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   margin-top: 40px;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
 }
 
 .fp-content {
@@ -211,10 +213,6 @@ h2 {
 .post-card p {
   font-size: 14px;
 }
-
-
-
-
 
 }
 
