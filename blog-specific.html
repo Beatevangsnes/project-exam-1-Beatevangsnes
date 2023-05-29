@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogs</title>
+    <title>Blog specific</title>
     <link rel="stylesheet" href="/css/layout.css" />
-    <link rel="stylesheet" href="/css/blogs.css" />
+    <link rel="stylesheet" href="/css/blog-specific.css" />
     <link rel="stylesheet" href="/fontawesome/css/all.css" />
-    <script src="/js/blogs.js" defer></script>
+    <script src="/js/blog-specific.js" defer></script>
   </head>
   <body>
     <header>
@@ -23,23 +23,17 @@
           <i class="fa-solid fa-bars"></i>
         </label>
         <ul class="nav-links">
-          <li><a href="/html/index.html">Home</a></li>
-          <li><a class="active" href="/html/blogs.html">Blogs</a></li>
-          <li><a href="/html/about.html">About</a></li>
-          <li><a href="/html/contact.html">Contact</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Blogs</h1>
-      <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search" />
-        <button id="search-clear-button" style="display: none">
-          <i class="fa-solid fa-times"></i>
-        </button>
+      <div class="blog-specific">
+        <div class="loader"></div>
       </div>
-      <div class="blog-posts"></div>
-      <button class="load-more">Load more</button>
     </main>
     <footer>
       <div class="some">
@@ -55,9 +49,8 @@
         </p>
       </div>
       <div class="links">
-        <a href="/html/index.html">Home</a> |
-        <a href="/html/about.html">About</a> |
-        <a href="/html/contact.html">Contact</a>
+        <a href="/blogs.html">Blogs</a> | <a href="/about.html">About</a> |
+        <a href="/contact.html">Contact</a>
       </div>
     </footer>
   </body>
