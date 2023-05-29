@@ -6,8 +6,8 @@ const searchInput = document.querySelector("#search-input");
 const searchClearButton = document.querySelector("#search-clear-button");
 
 let page = 1;
-const initialPerPage = 10; // Number of posts to display initially
-const perPage = 4; // Number of posts to load per "Load more" click
+const initialPerPage = 10; 
+const perPage = 4; 
 let existingPosts = [];
 let searchKeyword = "";
 
@@ -101,5 +101,5 @@ searchInput.addEventListener("keydown", function (event) {
 });
 searchClearButton.addEventListener("click", clearSearch);
 
-// Load the initial 10 posts
+
 getBlogs();
