@@ -13,7 +13,7 @@ if (!slug) {
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
-      document.title = data.title; 
+      document.title = data.title;
       blogSpecificContainer.innerHTML = "";
       const blogSpecific = document.createElement("div");
       blogSpecific.classList.add("blog-specific");
@@ -68,6 +68,12 @@ if (!slug) {
           document.body.appendChild(modal);
         }
       });
+
+ 
+      const loader = document.querySelector(".loader");
+      if (loader) {
+        loader.remove();
+      }
     } catch (error) {
       console.error(error);
     }

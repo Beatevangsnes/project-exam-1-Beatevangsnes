@@ -81,12 +81,6 @@ h2 {
   font-weight: 400;
 }
 
-@media (max-width: 599px) {
-  .blog-specific {
-    width: 100%;
-  }
-  
-}
 
 @media (min-width: 600px) {
 
