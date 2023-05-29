@@ -140,6 +140,7 @@ footer {
   .nav-links ul {
     height: 12vh;
     margin-bottom: 10px;
+    top: 0;
   }
 
   .checkbutton {
@@ -169,7 +170,9 @@ footer {
     margin-top: 20px;
     margin-bottom: 10px;
     height: 12vh;
+
   }
+
 
   ul {
     display: flex;
