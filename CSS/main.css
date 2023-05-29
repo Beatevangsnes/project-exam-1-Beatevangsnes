@@ -132,6 +132,13 @@ h2 {
   }
 }
 
+@media (min-width: 870px) {
+
+  main {
+    padding: 40px;
+  }
+}
+
 
 
 @media (min-width: 985px) {

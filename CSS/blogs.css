@@ -144,5 +144,9 @@ main h2 {
   button {
     font-size: 18px;
   }
+
+  main {
+    padding: 40px 80px 80px 80px;
+  }
 }
 

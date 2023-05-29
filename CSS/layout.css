@@ -237,6 +237,10 @@ footer {
     max-width: 240px;
   }
 
+  main {
+    padding: 80px;
+  }
+
  
 
 }

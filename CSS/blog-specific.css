@@ -10,11 +10,6 @@ main {
   justify-content: center;
 }
 
-.card-title {
-  text-align: center;
-  margin-bottom: 30px;
-
-}
 
 h2 {
   text-align: center;
@@ -190,5 +185,8 @@ h2 {
     font-size: 14px;
   }
 
+  main {
+    padding: 40px 80px 80px 80px;
+  }
 
 }
