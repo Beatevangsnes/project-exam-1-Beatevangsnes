@@ -155,6 +155,10 @@ h2 {
   padding-bottom: 20px;
 }
 
+.card :hover {
+  background-color: #1c1c1c;
+ }
+
 @media (min-width: 600px) {
 
   main {
@@ -183,9 +187,6 @@ h2 {
   padding-bottom: 20px;
  }
 
- .card :hover {
-  background-color: #1c1c1c;
- }
   
  .post-card a {
   width: 200px;
