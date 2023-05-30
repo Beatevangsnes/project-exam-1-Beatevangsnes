@@ -109,11 +109,19 @@ main h2 {
 
 @media (min-width: 800px) {
 
+  main {
+    padding: 40px;
+  }
+
   .blog-posts {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .blog-post {
+    margin: 20px;
   }
 
   .search-container input {
@@ -127,18 +135,6 @@ main h2 {
 
 }
 
-@media (min-width: 870px) {
-
-  main {
-    padding: 40px;
-  }
-  
-  .blog-post {
-    margin: 10px;
-  }
-
-
-}
 
 @media (min-width: 1200px) {
   button {
