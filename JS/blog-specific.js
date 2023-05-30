@@ -70,7 +70,10 @@ if (!slug) {
       });
 
  
-
+      const loader = document.querySelector(".loader");
+      if (loader) {
+        loader.remove();
+      }
     } catch (error) {
       console.error(error);
     }
