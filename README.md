@@ -1,6 +1,6 @@
 # Cheers & Cocktails
 
-![image](https://github.com/Beatevangsnes/Community-Science-Museum/blob/master/images/communitysciencemuseum.png?raw=true)
+![image](https://github.com/Beatevangsnes/Portfolio/blob/master/images/cheers&cocktails.png?raw=true)
 
 ## Description
 
